@@ -1,3 +1,5 @@
+<img src="https://socialify.git.ci/Siyanda-Mabaso/Library-Management-System-/image?language=1&owner=1&name=1&stargazers=1&theme=Light" alt="Library-Management-System-" width="640" height="320" />
+
 Project Setup:
 Create a new database LibraryDB.
 Create the required tables: Books, Authors, Patrons.
@@ -65,45 +67,37 @@ INSERT INTO patrons (id, name, email, borrowed_book) VALUES
 
 READING THE OPERATIONS(QUERIES)
 
-
 SELECT * FROM books;
 
 SELECT title FROM books;
 
-SELECT * FROM books WHERE author_id = 2;
+SELECT * FROM books WHERE author_id = 3 ;
 
 SELECT * FROM books WHERE available = TRUE;
 
-UPDATING THE OPERATIONS
-
+//UPDATING THE OPERATIONS
 
 UPDATE books 
 SET available = FALSE
-WHERE id = 1;
-
+WHERE id = 3  ;
 
 UPDATE books
-SET genres = array_append(genres, 'Classic')
-WHERE title = '1984';
-
+SET genres = array_append(genres, 'Rock')
+WHERE title = '1851';
 
 UPDATE patron 
 SET borrowed_books = array_append(borrowed_books, 9)
 WHERE id = 1
 
-DELETE OPERATION
-
-
+//DELETE OPERATION
 DELETE FROM books
-WHERE title = 'Moby-Dick';
+WHERE title = 'Pride and Prejudice';
 
 
 DELETE FROM authors
-WHERE id = 5;
+WHERE id = 2;
 
-ADVANCED QUERIES
-
-
+// ADVANCED QUERIES
 SELECT * FROM books
 WHERE published_year > 1950;
 
